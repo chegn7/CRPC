@@ -1,4 +1,4 @@
-package com.c.protocol;
+package com.c.crpc.protocol;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

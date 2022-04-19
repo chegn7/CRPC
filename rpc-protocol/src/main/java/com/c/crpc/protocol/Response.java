@@ -1,4 +1,4 @@
-package com.c.protocol;
+package com.c.crpc.protocol;
 
 import com.c.crpc.common.enumeration.ResponseEnum;
 import lombok.Data;
