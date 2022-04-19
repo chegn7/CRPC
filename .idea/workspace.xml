@@ -4,23 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d64f64f2-c80d-44c5-95df-be2586089129" name="Changes" comment="初始化项目">
-      <change afterPath="$PROJECT_DIR$/rpc-client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-common/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-example/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-protocol/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-registry/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-transport/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HelloServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/HelloServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="d64f64f2-c80d-44c5-95df-be2586089129" name="Changes" comment="初始化项目,module创建">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/c/crpc/enumeration/ResponseEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/Peer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/Request.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/Response.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/ServiceDescriptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HelloObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HelloObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-protocol/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +24,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,11 +49,12 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "jdk.selected.JAVA_MODULE": "openjdk-17",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "editor.preferences.folding"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -99,7 +95,8 @@
       <updated>1650297018101</updated>
       <workItem from="1650297022996" duration="670000" />
       <workItem from="1650297758199" duration="717000" />
-      <workItem from="1650354219708" duration="806000" />
+      <workItem from="1650354219708" duration="1660000" />
+      <workItem from="1650375262686" duration="1638000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1650297619163</created>
@@ -108,11 +105,29 @@
       <option name="project" value="LOCAL" />
       <updated>1650297619163</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="初始化项目,module创建">
+      <created>1650355198179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1650355198179</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -127,6 +142,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初始化项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="初始化项目" />
+    <MESSAGE value="初始化项目,module创建" />
+    <option name="LAST_COMMIT_MESSAGE" value="初始化项目,module创建" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
