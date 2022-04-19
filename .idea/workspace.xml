@@ -5,21 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64f64f2-c80d-44c5-95df-be2586089129" name="Changes" comment="初始化项目,module创建">
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/src/main/java/com/c/crpc/serialization/Decoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/src/main/java/com/c/crpc/serialization/Encoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/src/main/java/com/c/crpc/serialization/JSONDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/src/main/java/com/c/crpc/serialization/JSONEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/src/test/java/com/c/crpc/serialization/CodecTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/src/test/java/com/c/crpc/serialization/TestBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/TransportClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/TransportServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/protocol/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Peer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/protocol/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/protocol/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/protocol/ServiceDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/ServiceDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-serialization/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-serialization/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-transport/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-transport/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/c/crpc/common/enumeration/ExceptionEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/c/crpc/common/enumeration/ExceptionEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/HTTPTransportClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/HTTPTransportClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/TransportClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/TransportClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +23,8 @@
       <list>
         <option value="Enum" />
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -181,7 +170,7 @@
       <workItem from="1650297758199" duration="717000" />
       <workItem from="1650354219708" duration="1660000" />
       <workItem from="1650375262686" duration="1638000" />
-      <workItem from="1650377192209" duration="4117000" />
+      <workItem from="1650377192209" duration="5312000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1650297619163</created>

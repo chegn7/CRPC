@@ -13,6 +13,13 @@ import java.io.InputStream;
 public interface TransportClient {
     void connect(Peer peer);
 
+    /**
+     * 为什么都是输入流？
+     * 1. data 是客户端序列化之后经客户端的输出流发送给传输客户端的，对传输客户端是输入
+     * 2. 从http协议接收的响应流，对传输客户端，也是写入
+     * @param data
+     * @return
+     */
     InputStream write(InputStream data);
 
     void close();
