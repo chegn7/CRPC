@@ -1,4 +1,4 @@
-package com.c.crpc.enumeration;
+package com.c.crpc.common.enumeration;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

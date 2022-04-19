@@ -1,6 +1,6 @@
-package com.c.crpc;
+package com.c.protocol;
 
-import com.c.crpc.enumeration.ResponseEnum;
+import com.c.crpc.common.enumeration.ResponseEnum;
 import lombok.Data;
 
 /**
