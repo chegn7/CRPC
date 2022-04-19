@@ -6,20 +6,55 @@
 
     <groupId>com.ccc</groupId>
     <artifactId>CRPC</artifactId>
+    <packaging>pom</packaging>
     <version>${project.version}</version>
+    <modules>
+        <module>rpc-common</module>
+        <module>rpc-client</module>
+        <module>rpc-server</module>
+        <module>rpc-registry</module>
+        <module>rpc-protocol</module>
+        <module>rpc-transport</module>
+        <module>rpc-serialization</module>
+        <module>rpc-example</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.version>1.0-SNAPSHOT</project.version>
         <lombok.version>1.18.22</lombok.version>
+        <commons.version>2.11.0</commons.version>
+        <jetty.version>11.0.9</jetty.version>
+        <fastjson.version>1.2.80</fastjson.version>
+        <junit.version>4.13.2</junit.version>
+        <lombok.version>1.18.22</lombok.version>
+        <slfj-api.version>1.7.36</slfj-api.version>
+        <logback-classic.version>1.2.11</logback-classic.version>
+        <maven-compiler-plugin.version>3.10.1</maven-compiler-plugin.version>
     </properties>
 
     <dependencies>
         <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slfj-api.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback-classic.version}</version>
         </dependency>
     </dependencies>
 

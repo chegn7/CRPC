@@ -2,11 +2,19 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CRPC" />
+        <module name="rpc-registry" />
+        <module name="rpc-protocol" />
+        <module name="rpc-common" />
+        <module name="rpc-serialization" />
+        <module name="rpc-client" />
+        <module name="rpc-server" />
+        <module name="rpc-example" />
+        <module name="rpc-transport" />
       </profile>
     </annotationProcessing>
   </component>
