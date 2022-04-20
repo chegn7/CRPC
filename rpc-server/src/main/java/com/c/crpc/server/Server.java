@@ -52,7 +52,7 @@ public class Server {
                 byte[] outBytes = encoder.encode(resp);
                 try {
                     toResp.write(outBytes);
-                    
+
                     log.info("server responses to client.");
                 } catch (IOException e) {
                     log.error(e.getMessage(), e);
