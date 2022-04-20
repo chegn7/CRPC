@@ -62,6 +62,10 @@ public class Server {
         }
     };
 
+    public Server() {
+        this(new ServerConfig());
+    }
+
     public Server(ServerConfig config) {
         this.config = config;
 
