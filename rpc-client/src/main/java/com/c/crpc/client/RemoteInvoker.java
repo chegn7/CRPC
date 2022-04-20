@@ -43,7 +43,7 @@ public class RemoteInvoker implements InvocationHandler {
 
         Response resp = invokeRequest(request);
         if (resp == null || resp.getCode() != ResponseEnum.SUCCESS.getCode()) {
-            throw new IllegalStateException("fail to invoke remote method : " + resp)
+            throw new IllegalStateException("fail to invoke remote method : " + resp);
         }
         return resp.getData();
     }
