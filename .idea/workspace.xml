@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64f64f2-c80d-44c5-95df-be2586089129" name="Changes" comment="初始化项目,module创建">
-      <change afterPath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/HTTPTransportServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/c/crpc/server/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/c/crpc/server/ServerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/c/crpc/server/ServiceInstance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/c/crpc/server/ServiceInvoker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/c/crpc/server/ServiceManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-server/src/test/java/com/c/crpc/server/ServiceManagerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-server/src/test/java/com/c/crpc/server/TestBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-server/src/test/java/com/c/crpc/server/TestInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/src/main/java/com/c/crpc/common/enumeration/ResponseEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/src/main/java/com/c/crpc/common/enumeration/ResponseEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-common/target/classes/com/c/crpc/common/enumeration/ExceptionEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-common/target/classes/com/c/crpc/common/enumeration/ExceptionEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Request.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/ServiceDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/ServiceDescriptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/TransportServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/TransportServer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,12 +73,13 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.c.crpc.server" />
       <recent name="com.c.crpc.serialization" />
       <recent name="com.c.crpc.common.utils" />
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CodecTest.JSONDecode">
+  <component name="RunManager" selected="JUnit.ServiceManagerTest.lookup">
     <configuration name="CodecTest.JSONDecode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpc-serialization" />
       <extension name="coverage">
@@ -98,22 +112,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionUtilTest.getPublicMethods" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpc-common" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.c.crpc.common.utils.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.c.crpc.common.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.c.crpc.common.utils.ReflectionUtilTest" />
-      <option name="METHOD_NAME" value="getPublicMethods" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReflectionUtilTest.invoke" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rpc-common" />
       <extension name="coverage">
@@ -130,17 +128,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionUtilTest.newInstance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="rpc-common" />
+    <configuration name="ServiceManagerTest.lookup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpc-server" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.c.crpc.common.utils.*" />
+          <option name="PATTERN" value="com.c.crpc.server.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.c.crpc.common.utils" />
-      <option name="MAIN_CLASS_NAME" value="com.c.crpc.common.utils.ReflectionUtilTest" />
-      <option name="METHOD_NAME" value="newInstance" />
+      <option name="PACKAGE_NAME" value="com.c.crpc.server" />
+      <option name="MAIN_CLASS_NAME" value="com.c.crpc.server.ServiceManagerTest" />
+      <option name="METHOD_NAME" value="lookup" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceManagerTest.register" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rpc-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.c.crpc.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.c.crpc.server" />
+      <option name="MAIN_CLASS_NAME" value="com.c.crpc.server.ServiceManagerTest" />
+      <option name="METHOD_NAME" value="register" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ServiceManagerTest.lookup" />
+        <item itemvalue="JUnit.ServiceManagerTest.register" />
         <item itemvalue="JUnit.CodecTest.JSONDecode" />
         <item itemvalue="JUnit.CodecTest.JSONEncode" />
         <item itemvalue="JUnit.ReflectionUtilTest.invoke" />
-        <item itemvalue="JUnit.ReflectionUtilTest.getPublicMethods" />
-        <item itemvalue="JUnit.ReflectionUtilTest.newInstance" />
       </list>
     </recent_temporary>
   </component>
@@ -168,7 +182,7 @@
       <workItem from="1650297758199" duration="717000" />
       <workItem from="1650354219708" duration="1660000" />
       <workItem from="1650375262686" duration="1638000" />
-      <workItem from="1650377192209" duration="6546000" />
+      <workItem from="1650377192209" duration="11830000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1650297619163</created>

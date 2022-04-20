@@ -7,6 +7,7 @@ import lombok.Getter;
 @Getter
 public enum ResponseEnum {
     SUCCESS(0, "ok"),
+    FAIL(1),
     OTHER(2);
     int code;
     String message;
