@@ -3,13 +3,11 @@ package com.c.crpc.protocol;
 import com.c.crpc.common.enumeration.ResponseEnum;
 import lombok.Data;
 
-import java.io.Serializable;
-
 /**
  * 服务端返回的响应
  */
 @Data
-public class Response implements Serializable {
+public class Response {
     /**
      * 服务端响应状态码
      * 0 成功

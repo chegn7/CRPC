@@ -2,13 +2,11 @@ package com.c.crpc.protocol;
 
 import lombok.Data;
 
-import java.io.Serializable;
-
 /**
  * RPC 客户端发送的请求
  */
 @Data
-public class Request implements Serializable {
+public class Request {
     /**
      * 描述客户端请求的服务
      */
