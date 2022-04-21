@@ -7,7 +7,7 @@ public class ExampleClient {
     public static void main(String[] args) {
         Client client = new Client();
         CalculateService service = client.getProxy(CalculateService.class);
-
+        int add = service.add(1, 2);
         System.out.println(service.add(1, 2));
         System.out.println(service.minus(1, 2));
     }

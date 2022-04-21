@@ -20,7 +20,7 @@ import java.io.OutputStream;
 @Slf4j
 public class HTTPTransportServer implements TransportServer{
     private RequestHandler handler;
-    private Server server;
+    private Server server;// 这里的server 是jetty的server，不是我们rpc-server中的server
 
     @Override
     public void init(int port, RequestHandler handler) {

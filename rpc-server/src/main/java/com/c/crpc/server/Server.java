@@ -24,43 +24,7 @@ public class Server {
     private ServiceManager serviceManager;
     private ServiceInvoker serviceInvoker;
 
-    private RequestHandler handler = new RequestHandler() {
-        @Override
-        public void onRequest(InputStream receive, OutputStream toResp) {
-            Response resp = new Response();
-            try {
-                // 1. 从接收里读数据，反序列化成请求
-                byte[] inBytes = IOUtils.readFully(receive, receive.available());
-                Request request = decoder.decode(inBytes, Request.class);
-                log.info("get request : {}", request);
-                // 2. 根据request找服务并调用
-                ServiceInstance serviceInstance = serviceManager.lookup(request);
-                Object returnObject = serviceInvoker.invoke(serviceInstance, request);
-                // 3. 返回调用的结果
-
-                resp.setData(returnObject);
-                resp.setCode(ResponseEnum.SUCCESS.getCode());
-                resp.setMessage(ResponseEnum.SUCCESS.getMessage());
-
-            } catch (Exception e) {
-                log.error(e.getMessage(), e);
-                resp.setCode(ResponseEnum.FAIL.getCode());
-                resp.setMessage("server error : " + e.getClass().getName()
-                        + " : " + e.getMessage());
-                throw new RuntimeException(e);
-            } finally {
-                byte[] outBytes = encoder.encode(resp);
-                try {
-                    toResp.write(outBytes);
-
-                    log.info("server responses to client.");
-                } catch (IOException e) {
-                    log.error(e.getMessage(), e);
-                }
-            }
-
-        }
-    };
+    private RequestHandler handler;
 
     public Server() {
         this(new ServerConfig());
@@ -68,6 +32,44 @@ public class Server {
 
     public Server(ServerConfig config) {
         this.config = config;
+
+        handler = new RequestHandler() {
+            @Override
+            public void onRequest(InputStream receive, OutputStream toResp) {
+                Response resp = new Response();
+                try {
+                    // 1. 从接收里读数据，反序列化成请求
+                    byte[] inBytes = IOUtils.readFully(receive, receive.available());
+                    Request request = decoder.decode(inBytes, Request.class);
+                    log.info("get request : {}", request);
+                    // 2. 根据request找服务并调用
+                    ServiceInstance serviceInstance = serviceManager.lookup(request);
+                    Object returnObject = serviceInvoker.invoke(serviceInstance, request);
+                    // 3. 返回调用的结果
+
+                    resp.setData(returnObject);
+                    resp.setCode(ResponseEnum.SUCCESS.getCode());
+                    resp.setMessage(ResponseEnum.SUCCESS.getMessage());
+
+                } catch (Exception e) {
+                    log.error(e.getMessage(), e);
+                    resp.setCode(ResponseEnum.FAIL.getCode());
+                    resp.setMessage("server error : " + e.getClass().getName()
+                            + " : " + e.getMessage());
+                    throw new RuntimeException(e);
+                } finally {
+                    byte[] outBytes = encoder.encode(resp);
+                    try {
+                        toResp.write(outBytes);
+
+                        log.info("server responses to client.");
+                    } catch (IOException e) {
+                        log.error(e.getMessage(), e);
+                    }
+                }
+
+            }
+        };
 
         transportServer = ReflectionUtil.newInstance(config.getTransportClass());
         transportServer.init(config.getPort(), handler);
