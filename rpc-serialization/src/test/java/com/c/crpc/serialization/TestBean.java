@@ -3,14 +3,17 @@ package com.c.crpc.serialization;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 @Data
 @NoArgsConstructor
-public class TestBean {
+public class TestBean implements Serializable {
     String name;
     int age;
     String address;
+
+    Object[] args;
 
     @Override
     public boolean equals(Object o) {
