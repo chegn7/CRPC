@@ -5,27 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d64f64f2-c80d-44c5-95df-be2586089129" name="Changes" comment="初始化项目,module创建">
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/src/main/java/com/c/crpc/serialization/PlainJavaDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rpc-serialization/src/main/java/com/c/crpc/serialization/PlainJavaEncoder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/SocketTransportClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/SocketTransportServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/com/c/crpc/client/X.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/com/c/crpc/client/Y.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-client/target/classes/com/c/crpc/client/Z.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-example/src/main/java/com/c/crpc/example/ExampleClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-example/src/main/java/com/c/crpc/example/ExampleClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-example/src/main/java/com/c/crpc/example/ExampleServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-example/src/main/java/com/c/crpc/example/ExampleServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-example/target/classes/com/c/crpc/example/ExampleClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-example/target/classes/com/c/crpc/example/ExampleClient.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-example/target/classes/com/c/crpc/example/ExampleServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-example/target/classes/com/c/crpc/example/ExampleServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Response.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/Response.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/ServiceDescriptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/src/main/java/com/c/crpc/protocol/ServiceDescriptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/target/classes/com/c/crpc/protocol/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/com/c/crpc/protocol/Request.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/target/classes/com/c/crpc/protocol/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/com/c/crpc/protocol/Response.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-protocol/target/classes/com/c/crpc/protocol/ServiceDescriptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-protocol/target/classes/com/c/crpc/protocol/ServiceDescriptor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-serialization/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-serialization/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-serialization/src/test/java/com/c/crpc/serialization/CodecTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-serialization/src/test/java/com/c/crpc/serialization/CodecTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-serialization/src/test/java/com/c/crpc/serialization/TestBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-serialization/src/test/java/com/c/crpc/serialization/TestBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-serialization/target/test-classes/com/c/crpc/serialization/CodecTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-serialization/target/test-classes/com/c/crpc/serialization/CodecTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rpc-serialization/target/test-classes/com/c/crpc/serialization/TestBean.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-serialization/target/test-classes/com/c/crpc/serialization/TestBean.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rpc-server/src/main/java/com/c/crpc/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/src/main/java/com/c/crpc/server/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/c/crpc/server/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/c/crpc/server/Server$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rpc-server/target/classes/com/c/crpc/server/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/rpc-server/target/classes/com/c/crpc/server/Server.class" afterDir="false" />
     </list>
@@ -61,18 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "jdk.selected.JAVA_MODULE": "openjdk-17",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-17&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.c.crpc.client" />
@@ -182,7 +169,8 @@
       <workItem from="1650297758199" duration="717000" />
       <workItem from="1650354219708" duration="1660000" />
       <workItem from="1650375262686" duration="1638000" />
-      <workItem from="1650377192209" duration="47878000" />
+      <workItem from="1650377192209" duration="57679000" />
+      <workItem from="1650550174439" duration="3645000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1650297619163</created>
@@ -230,6 +218,32 @@
     <MESSAGE value="初始化项目" />
     <MESSAGE value="初始化项目,module创建" />
     <option name="LAST_COMMIT_MESSAGE" value="初始化项目,module创建" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/SocketTransportClient.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-transport/src/main/java/com/c/crpc/transport/SocketTransportClient.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-client/src/main/java/com/c/crpc/client/RemoteInvoker.java</url>
+          <line>51</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/rpc-example/src/main/java/com/c/crpc/example/ExampleClient.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

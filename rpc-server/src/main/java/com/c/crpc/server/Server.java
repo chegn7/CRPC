@@ -14,9 +14,12 @@ import org.apache.commons.io.IOUtils;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.concurrent.ExecutorService;
 
 @Slf4j
 public class Server {
+
+    private final ExecutorService threadPool;
     private ServerConfig config;
     private TransportServer transportServer;
     private Encoder encoder;
@@ -31,6 +34,7 @@ public class Server {
     }
 
     public Server(ServerConfig config) {
+        threadPool = null;
         this.config = config;
 
         handler = new RequestHandler() {
@@ -42,14 +46,16 @@ public class Server {
                     byte[] inBytes = IOUtils.readFully(receive, receive.available());
                     Request request = decoder.decode(inBytes, Request.class);
                     log.info("get request : {}", request);
-                    // 2. 根据request找服务并调用
-                    ServiceInstance serviceInstance = serviceManager.lookup(request);
-                    Object returnObject = serviceInvoker.invoke(serviceInstance, request);
-                    // 3. 返回调用的结果
+                    if (request != null) {
+                        // 2. 根据request找服务并调用
+                        ServiceInstance serviceInstance = serviceManager.lookup(request);
+                        Object returnObject = serviceInvoker.invoke(serviceInstance, request);
+                        // 3. 返回调用的结果
 
-                    resp.setData(returnObject);
-                    resp.setCode(ResponseEnum.SUCCESS.getCode());
-                    resp.setMessage(ResponseEnum.SUCCESS.getMessage());
+                        resp.setData(returnObject);
+                        resp.setCode(ResponseEnum.SUCCESS.getCode());
+                        resp.setMessage(ResponseEnum.SUCCESS.getMessage());
+                    }
 
                 } catch (Exception e) {
                     log.error(e.getMessage(), e);
@@ -67,7 +73,6 @@ public class Server {
                         log.error(e.getMessage(), e);
                     }
                 }
-
             }
         };
 
